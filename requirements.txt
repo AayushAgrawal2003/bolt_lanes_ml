@@ -12,3 +12,4 @@ seaborn
 prefetch_generator
 imageio
 scikit-learn
+seaborn
