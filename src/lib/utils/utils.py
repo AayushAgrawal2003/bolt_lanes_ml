@@ -51,7 +51,7 @@ def create_logger(cfg, cfg_path, phase='train', rank=-1):
 
 def select_device(logger=None, device='', batch_size=None):
     # device = 'cpu' or '0' or '0,1,2,3'
-    cpu_request = device.lower() == 'cpu'
+    cpu_request = device == 'cpu'
     if device and not cpu_request:  # if device requested other than 'cpu'
         os.environ['CUDA_VISIBLE_DEVICES'] = device  # set environment variable
         assert torch.cuda.is_available(), 'CUDA unavailable, invalid device %s requested' % device  # check availablity
